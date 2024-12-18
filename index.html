@@ -3,30 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Информация о товарах</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Описание и информация о самокатах разных моделей.">
+  <meta name="keywords" content="самокаты, Globber, трюковые, детские, подростковые">
+  <meta name="author" content="Ваше имя">
+  <title>Информация о товарах - Самокаты</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 250vh; 
+      background-image: url('orange-scooter-isolated-studio-yellow-background_1303-31102.jpg'); /* Задайте путь к вашей картинке */
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center; 
+      justify-content: flex-start; 
+      color: white;
+      padding: 50px; 
+    }
+
+    .hero-text {
+      max-width: 400px; 
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    }
+
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #db00af;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffccf2;
+    }
+
+ 
+    header {
+      margin-top: 60px;
+      text-align: center;
+      background-color: #db00af;
+      color: white;
+      padding: 20px 10px;
+      position: relative;
+    }
+
+    header .hero-image {
+      width: 100%;
+      height: 300px;
+      background-color: #e4e4e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    header .hero-image img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    section {
+      position: relative;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-image {
+      width: 100%;
+      height: 200px;
+      background-color: #e4e4e4;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .section-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-title {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #db00af;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+
+    section p {
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    @media (min-width: 992px) {
+      section {
+        width: 30%;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      section {
+        width: 47%;
+      }
+
+      section:nth-child(3) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      section {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Самокаты</h1>
-    </header>
-    
-    <div class="container">
-        <section>
-            <div class="section-title">Globber One NL 205</div>
-            <p>Самокат трюковой Limit Lmt69.Наличие:В наличии.Модель: One NL 205. Артикул: 477102</p>
-        </section>
 
+  <nav class="navbar">
+    <div class="logo">Самокаты</div>
+    <ul>
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#catalog">Каталог</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+
+
+  <header id="home">
+    <div class="hero-image">
+      <div class="hero-text">Добро пожаловать в наш магазин!</div>
+  </header>
+  
+
+  <div class="container" id="catalog">
     <section>
-      <div class="section-title">Globber Flow 125 Lights</div>
-      <p>Самокат подростковый Globber Flow 125 Lights. Наличие:В наличии. Модель: Flow 125 Lights. Артикул: 772-114</p>
+      <div class="section-image">
+        <img src="limit-lmt-22-serebristyj-104627512-1.jpg" alt="Globber One NL 205">
+      </div>
+      <div class="section-title">Globber One NL 205</div>   
+      <p><b>Самокат трюковой Limit Lmt69. </b></p>
+      <p>Наличие: В наличии. </p>
+      <p>Модель: One NL 205.</p>
+      <p> Артикул: 477102.</p>
     </section>
 
     <section>
+      <div class="section-image">
+        <img src="6384939154.jpg" alt="Globber Flow 125 Lights">
+      </div>
+      <div class="section-title">Globber Flow 125 Lights</div>
+      <p><b>Самокат подростковый Globber Flow 125 Lights.</b></p> 
+      <p>Наличие: В наличии. 
+      <p>Модель: Flow 125 Lights.</p>
+      <p>Артикул: 772-114.</p>
+    </section>
+
+    <section>
+      <div class="section-image">
+        <img src="112622420299.jpg" alt="Primo Foldable Lights">
+      </div>
       <div class="section-title">Primo Foldable Lights</div>
-      <p>Самокат детский Globber Primo Foldable Lights.Наличие:В наличии. Модель:Primo Foldable Lights. Артикул: 432-101-3 </p>
+      <p><b>Самокат детский Globber Primo Foldable Lights.</b></p> 
+      <p>Наличие: В наличии.</p> 
+      <p>Модель: Primo Foldable Lights. </p>
+      <p>Артикул: 432-101-3.</p>
     </section>
   </div>
 
+
+  <footer id="contacts" style="text-align: center; padding: 20px; background-color: #db00af; color: white;">
+    <p>Контакты: example@example.com | Телефон: +7 (123) 456-78-90</p>
+    <p>&copy; 2024 Самокаты. Все права защищены.</p>
+  </footer>
 </body>
 </html>
+
